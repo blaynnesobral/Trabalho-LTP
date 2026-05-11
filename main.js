@@ -1,14 +1,15 @@
+class Livro {
+    constructor(titulo, autor, genero, anoPub, numPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.anoPub = anoPub;
+        this.numPaginas = numPaginas;
+    }
 
-const pronpt = require('prompt-sync') ();
-constLivro = require('./Livro')
-
-const livros = [];
-
-let opcao = -1;
-
-while (opcao !== 0){
-    console.log('1 - cadastrar livro');
-     console.log('2 - listar livro');
-      console.log('3 - alterar livro');
-       console.log('4 -  ');
+    getInfo() {
+        return `${this.titulo} - ${this.autor} - ${this.genero} - ${this.anoPub} - ${this.numPaginas} páginas`;
+    }
 }
+
+module.exports = Livro;
