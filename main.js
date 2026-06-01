@@ -38,8 +38,11 @@ while (opcao !== 0) {
         anoPub,
         numPaginas
     );
-
+               
+            livros.push(novoLivro);
+            
             console.log("Cadastrar");
+            
             break;
 
         case 2:
