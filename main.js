@@ -43,6 +43,16 @@ while (opcao !== 0) {
             break;
 
         case 2:
+              if (livros.length === 0) {
+        console.log("Nenhum livro cadastrado.");
+    } else {
+
+        livros.forEach((livro, index) => {
+            console.log(`${index} - ${livro.getInfo()}`);
+        });
+
+    }
+
             console.log("Listar");
             break;
 
