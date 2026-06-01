@@ -60,8 +60,40 @@ while (opcao !== 0) {
             break;
 
         case 3:
-            console.log("Alterar");
-            break;
+             if (livros.length === 0) {
+        console.log("Nenhum livro cadastrado.");
+        break;
+    }
+
+    livros.forEach((livro, index) => {
+        console.log(`${index} - ${livro.getInfo()}`);
+    });
+
+    const indice = parseInt(prompt("Índice do livro: "));
+
+    if (isNaN(indice) || indice < 0 || indice >= livros.length) {
+        console.log("Índice inválido.");
+        break;
+    }
+
+    let novoTitulo = prompt("Novo título: ").trim();
+    let novoAutor = prompt("Novo autor: ").trim();
+    let novoGenero = prompt("Novo gênero: ").trim();
+
+    let novoAno = prompt("Novo ano: ").trim();
+    let novasPaginas = prompt("Novas páginas: ").trim();
+
+    if (novoTitulo !== "") livros[indice].titulo = novoTitulo;
+    if (novoAutor !== "") livros[indice].autor = novoAutor;
+    if (novoGenero !== "") livros[indice].genero = novoGenero;
+
+    if (novoAno !== "") livros[indice].anoPub = parseInt(novoAno);
+    if (novasPaginas !== "") livros[indice].numPaginas = parseInt(novasPaginas);
+
+    console.log("Livro atualizado!");
+
+    break;
+}
 
         case 4:
             console.log("Estatísticas");
