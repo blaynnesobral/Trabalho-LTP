@@ -24,6 +24,21 @@ while (opcao !== 0) {
     switch(opcao) {
 
         case 1:
+
+    const titulo = prompt("Título: ");
+    const autor = prompt("Autor: ");
+    const genero = prompt("Gênero: ");
+    const anoPub = parseInt(prompt("Ano: "));
+    const numPaginas = parseInt(prompt("Páginas: "));
+
+    const novoLivro = new Livro(
+        titulo,
+        autor,
+        genero,
+        anoPub,
+        numPaginas
+    );
+
             console.log("Cadastrar");
             break;
 
